@@ -1,0 +1,23 @@
+package com.qfedu.hrs.service;
+
+import org.junit.Test;
+
+// Keep your bar green!
+
+public class DeptServiceTest  {
+
+	@Test
+	public void testListAllDepts() {
+		
+	}
+	
+	@Test
+	public void testAddNewDept() {
+		
+	}
+	
+	@Test
+	public void testRemoveDeptByNo() {
+		
+	}
+}

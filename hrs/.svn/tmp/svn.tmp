@@ -1,0 +1,34 @@
+package com.qfedu.hrs.util;
+
+import static org.junit.Assert.*;
+import static java.lang.System.out;
+
+import org.junit.Test;
+
+public class CommonUtilTest {
+
+	@Test
+	public void testAdd() {
+		assertEquals(3, CommonUtil.add(1, 2));
+		assertEquals(5, CommonUtil.add(3, 2));
+		assertEquals(-5, CommonUtil.add(-3, -2));
+		assertEquals(1, CommonUtil.add(3, -2));
+		assertEquals(-1, CommonUtil.add(-3, 2));
+	}
+	
+	@Test
+	public void testFactorial() {
+		out.println(0.1 + 0.2 + 0.3);
+		out.println(0.3 + 0.2 + 0.1);
+		assertEquals(120.0, CommonUtil.factorial(5), 0.01);
+		assertEquals(1, CommonUtil.factorial(0), 0.01);
+		assertEquals(1, CommonUtil.factorial(1), 0.01);
+	}
+	@Test
+	public void testIsValidForTriangle(){
+		assertTrue(CommonUtil.isValidForTriangle(6,6,6));
+		assertTrue(CommonUtil.isValidForTriangle(3,4,5));
+		assertTrue(CommonUtil.isValidForTriangle(9,6,6));
+		assertTrue(CommonUtil.isValidForTriangle(1,6,6));
+	}
+}

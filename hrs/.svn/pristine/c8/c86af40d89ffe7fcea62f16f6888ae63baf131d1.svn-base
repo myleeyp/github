@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>新增部门</title>
+		<style>
+			.error { color:red; font-size: 12px; }
+		</style>
+	</head>
+	<body>
+		<h1>新增部门</h1>
+		<hr>
+		<p class="error" th:text="${hint}"></p>
+		<form action="#" th:action="addDept" th:object="${dept}" method="post">
+			<div>
+				<label for="no">部门编号: </label>
+				<input type="number" th:field="*{no}">
+				<span class="error" id="noerr" th:if="${#fields.hasErrors('no')}" th:text="部门编号无效"></span>
+			</div>
+			<div>
+				<label for="name">部门名称: </label>
+				<input type="text" th:field="*{name}">
+				<span  class="error" id="nameerr" th:if="${#fields.hasErrors('name')}" th:text="部门名称无效"></span>
+			</div>
+			<div>
+				<label for="location">部门所在地: </label>
+				<input type="text" th:field="*{location}">
+				<span  class="error" id="locerr" th:if="${#fields.hasErrors('location')}" th:text="部门所在地无效"></span>
+			</div>
+			<div>
+				<input type="submit" value="确定">
+			</div>
+		</form>
+		<script src="js/jquery.min.js"></script>
+		<script>
+			/* $(function() {
+				var form = document.forms[0];
+				$(form).on('submit', function(evt) {
+					evt.preventDefault();
+					if (checkNo() & checkName()) {
+						this.submit();
+					}
+				});
+				
+				function checkNo() {
+					var no = parseInt($('#no').val());
+					var flag = no >= 10 && no <= 99;
+					flag ? $('#noerr').text('') : $('#noerr').text('部门编号是10-99的数字');
+					return flag;
+				}
+				
+				function checkName() {
+					var name = $('#name').val();
+					var flag = name.length >= 3 && name.length <= 10;
+					flag ? $('#nameerr').text('') : $('#nameerr').text('部门名称为3-10个字符');
+					return flag;
+				}
+			}); */
+		</script>
+	</body>
+</html>

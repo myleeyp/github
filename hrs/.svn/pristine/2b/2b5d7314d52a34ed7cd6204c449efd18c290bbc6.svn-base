@@ -1,0 +1,27 @@
+package com.qfedu.hrs.util;
+
+public final class CommonUtil {
+
+	private CommonUtil() {
+		throw new AssertionError();
+	}
+	
+	public static int add(int a, int b) {
+		return a + b;
+	}
+	
+	public static boolean isValidForTriangle(double a, double b, double c) {
+		assert a > 0 && b > 0 && c > 0;	// Java 5 new keyword - assert
+		return a + b > c && b + c > a && a + c > b;
+	}
+	
+	public static double factorial(int n) {
+		assert n >= 0;
+		if (n == 0 || n == 1) return 1;
+		return n * factorial(n - 1);
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(factorial(-5));
+	}
+}
