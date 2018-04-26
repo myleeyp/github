@@ -50,7 +50,7 @@ public class CommonUtilTest {
 		assert 1 > 2;
 	}
 	
-	@Test
+	@Test 
 	public void testRandomInt() {
 		for (int i = 1; i <= 10000; ++i) {
 			assertThat(randomInt(1, 100), allOf(
