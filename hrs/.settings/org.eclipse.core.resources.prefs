@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/ftl/dept.ftl=utf-8
+encoding//src/test/java/com/qfedu/hrs/service/DeptServiceTest.java=UTF-8
+encoding/HRS_create_and_init.sql=UTF-8
 encoding/ReadMe.txt=GBK

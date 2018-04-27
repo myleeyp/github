@@ -65,6 +65,7 @@ public class CommonUtilTest {
 		assertTrue(isValidForTriangle(3, 4, 5));
 		assertTrue(isValidForTriangle(3, 3, 3));
 		assertFalse(isValidForTriangle(1, 2, 3));
+		assertFalse(isValidForTriangle(5, 2, 3));
 	}
 
 	@Test
